@@ -1,9 +1,9 @@
 #!/bin/bash
-export KBUILD_BUILD_USER=Frostleaf
-export KBUILD_BUILD_HOST=Darkness
+export KBUILD_BUILD_USER=Hiroumuims
+export KBUILD_BUILD_HOST=Shadow
 echo $KBUILD_BUILD_USER
 echo $KBUILD_BUILD_HOST
-export LOCALVERSION="-Endfield 🪐"
+export LOCALVERSION="-LostEchoes 🪐"
 echo -e "done?"
 sleep 2s
 
