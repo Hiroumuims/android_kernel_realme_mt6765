@@ -46,7 +46,6 @@ jobs:
       with:
         ref: ${{ github.event.inputs.branch }}
         fetch-depth: 1
-        
 - name: Install Dependencies
   run: |
     export MAN_DISABLE=true
