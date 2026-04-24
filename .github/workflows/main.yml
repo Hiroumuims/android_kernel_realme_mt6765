@@ -101,6 +101,7 @@ jobs:
         name: ${{ github.event.inputs.kernelsu_variant }}-${{ github.run_id }}
         tag_name: ${{ github.run_id }}
         token: ${{ secrets.MY_TOKEN }}
+
     - name: Run Build Script
       env:
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
