@@ -47,8 +47,8 @@ jobs:
         ref: ${{ github.event.inputs.branch }}
         fetch-depth: 1
         
-        -name: Install Dependencies
-        run: |
+    - name: Install Dependencies
+    run: |
          export MAN_DISABLE=true
           sudo apt update && sudo apt upgrade -y
           sudo apt-get install -y dialog bash sed wget git curl \
