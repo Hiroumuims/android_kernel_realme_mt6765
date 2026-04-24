@@ -46,12 +46,13 @@ jobs:
       with:
         ref: ${{ github.event.inputs.branch }}
         fetch-depth: 1
-- name: Install Dependencies
-  run: |
-    export MAN_DISABLE=true
-    sudo apt update && sudo apt upgrade -y
-    sudo apt-get install -y dialog bash sed wget git curl \
-                            zip tar jq expect make cmake automake autoconf \
+        
+        -name: Install Dependencies
+        run: |
+         export MAN_DISABLE=true
+          sudo apt update && sudo apt upgrade -y
+          sudo apt-get install -y dialog bash sed wget git curl \
+          zip tar jq expect make cmake automake autoconf \
                             llvm lld lldb clang gcc binutils bison perl gperf \
                             gawk flex bc python3 zstd openssl unzip cpio bc bison \
                             build-essential ccache liblz4-tool libsdl1.2-dev libstdc++6 \
@@ -59,7 +60,7 @@ jobs:
                             xsltproc zlib1g-dev libncurses5-dev bzip2 git gcc g++ libssl-dev \
                             gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi \
                             dos2unix kmod python2 rlwrap
-
+    
     - name: Setup Environment
       run: |
         echo "Build User: $KBUILD_BUILD_USER"
