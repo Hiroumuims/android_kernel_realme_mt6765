@@ -103,7 +103,7 @@ jobs:
         token: ${{ secrets.MY_TOKEN }}
  
     - name: Run Build Script
-        env:
+      env:
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -117,9 +117,9 @@ jobs:
           chmod +x *.sh
           ./build.sh
           
-      - name: Upload Artifacts (ZIP Only)
-        id: upload-zip
-        uses: actions/upload-artifact@v4
+      name: Upload Artifacts (ZIP Only)
+      id: upload-zip
+      uses: actions/upload-artifact@v4
         with:
           name: ${{ env.BASE_NAME }}-${{ github.run_number }}
           path: |
