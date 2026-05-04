@@ -91,6 +91,7 @@ jobs:
           HEADER_ARCH=arm64 \
           SUBARCH=arm64 \
           LD=ld.lld \
+          LDFLAGS="-m aarch64linux" \
           AR=llvm-ar \
           NM=llvm-nm \
           STRIP=llvm-strip \
