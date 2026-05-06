@@ -87,11 +87,11 @@ jobs:
     - name: Build Kernel
       run: |
         make CC=clang ARCH=arm64 O=~/out ${{ github.event.inputs.defconfig }}
-        echo "n" | make CC=clang ARCH=arm64 O=~/out -j$(nproc) \
+        echo "n" | make CC=clang ARCH=arm64 O=~/out -j$(nproc) V=1 \
           HEADER_ARCH=arm64 \
           SUBARCH=arm64 \
           LD=ld.lld \
-          LDFLAGS="-m aarch64linux" \
+          LDFLAGS="-m aarch64linux -fno-PIE" \
           AR=llvm-ar \
           NM=llvm-nm \
           STRIP=llvm-strip \
